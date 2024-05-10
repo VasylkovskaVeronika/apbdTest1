@@ -17,7 +17,7 @@ public class BooksController: ControllerBase
     }
     //GET api/books/1 
     [HttpGet("{id}", Name = "GetB")]
-    public IActionResult GetAnimals([FromQuery] int id)
+    public IActionResult GetAnimals(int id)
     {
         var res = _repository.GetBookInfoById(id);
         return Ok(res);
